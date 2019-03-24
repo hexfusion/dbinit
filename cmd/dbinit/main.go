@@ -7,15 +7,15 @@ import (
 
 var (
 	rootCmd = &cobra.Command{
-		Use:   "dbinit",
-		Short: "etcd database initalizer",
+		Use:   "dbutil",
+		Short: "etcd v3 database util",
 		Long:  "",
 	}
 )
 
 func main() {
 	if err := rootCmd.Execute(); err != nil {
-		glog.Exitf("Error executing dbinit: %v", err)
+		glog.Exitf("Error executing dbutil: %v", err)
 	}
 
 }

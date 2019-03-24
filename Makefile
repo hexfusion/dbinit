@@ -6,14 +6,14 @@ IMAGE_TAG:=
 
 $( shell mkdir -p bin )
 
-build: bin/dbinit
+build: bin/dbutil
 
 check:
 	@golint -set_exit_status $(shell go list ./...)
 	@go vet $(shell go list ./...)
 
-bin/dbinit: $(GOFILES)
-	@go build $(GOFLAGS) -o $(ROOT_DIR)/bin/dbinit github.com/hexfusion/dbinit/cmd/dbinit
+bin/dbutil: $(GOFILES)
+	@go build $(GOFLAGS) -o $(ROOT_DIR)/bin/dbutil github.com/hexfusion/dbutil/cmd/dbutil
 
 vendor:
 	@go mod vendor -v

@@ -1,4 +1,4 @@
-module github.com/hexfusion/dbinit
+module github.com/hexfusion/dbutil
 
 require (
 	github.com/coreos/bbolt v1.3.2 // indirect
